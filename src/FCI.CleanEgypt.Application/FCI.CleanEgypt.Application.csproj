@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\FCI.CleanEgypt.Contracts\FCI.CleanEgypt.Contracts.csproj"/>
+        <ProjectReference Include="..\FCI.CleanEgypt.Domain\FCI.CleanEgypt.Domain.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="Users\Queries\"/>
+    </ItemGroup>
+
+</Project>

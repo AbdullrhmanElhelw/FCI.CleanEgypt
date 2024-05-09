@@ -1,0 +1,60 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "FCI.CleanEgypt.Persistance/1.0.0": {
+        "dependencies": {
+          "FCI.CleanEgypt.Application": "1.0.0"
+        },
+        "runtime": {
+          "FCI.CleanEgypt.Persistance.dll": {}
+        }
+      },
+      "FCI.CleanEgypt.Application/1.0.0": {
+        "dependencies": {
+          "FCI.CleanEgypt.Contracts": "1.0.0",
+          "FCI.CleanEgypt.Domain": "1.0.0"
+        },
+        "runtime": {
+          "FCI.CleanEgypt.Application.dll": {}
+        }
+      },
+      "FCI.CleanEgypt.Contracts/1.0.0": {
+        "runtime": {
+          "FCI.CleanEgypt.Contracts.dll": {}
+        }
+      },
+      "FCI.CleanEgypt.Domain/1.0.0": {
+        "runtime": {
+          "FCI.CleanEgypt.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FCI.CleanEgypt.Persistance/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FCI.CleanEgypt.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FCI.CleanEgypt.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FCI.CleanEgypt.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

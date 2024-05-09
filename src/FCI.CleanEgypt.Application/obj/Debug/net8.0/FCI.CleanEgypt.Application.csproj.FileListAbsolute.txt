@@ -1,0 +1,17 @@
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Application/bin/Debug/net8.0/FCI.CleanEgypt.Application.deps.json
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Application/bin/Debug/net8.0/FCI.CleanEgypt.Application.dll
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Application/bin/Debug/net8.0/FCI.CleanEgypt.Application.pdb
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Application/bin/Debug/net8.0/FCI.CleanEgypt.Contracts.dll
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Application/bin/Debug/net8.0/FCI.CleanEgypt.Domain.dll
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Application/bin/Debug/net8.0/FCI.CleanEgypt.Contracts.pdb
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Application/bin/Debug/net8.0/FCI.CleanEgypt.Domain.pdb
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Application/obj/Debug/net8.0/FCI.CleanEgypt.Application.csproj.AssemblyReference.cache
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Application/obj/Debug/net8.0/FCI.CleanEgypt.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Application/obj/Debug/net8.0/FCI.CleanEgypt.Application.AssemblyInfoInputs.cache
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Application/obj/Debug/net8.0/FCI.CleanEgypt.Application.AssemblyInfo.cs
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Application/obj/Debug/net8.0/FCI.CleanEgypt.Application.csproj.CoreCompileInputs.cache
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Application/obj/Debug/net8.0/FCI.CleanEgypt.Application.csproj.CopyComplete
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Application/obj/Debug/net8.0/FCI.CleanEgypt.Application.dll
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Application/obj/Debug/net8.0/refint/FCI.CleanEgypt.Application.dll
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Application/obj/Debug/net8.0/FCI.CleanEgypt.Application.pdb
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Application/obj/Debug/net8.0/ref/FCI.CleanEgypt.Application.dll

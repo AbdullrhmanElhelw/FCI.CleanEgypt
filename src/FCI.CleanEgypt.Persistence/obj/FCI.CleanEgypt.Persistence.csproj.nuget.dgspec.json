@@ -1,0 +1,253 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Persistence/FCI.CleanEgypt.Persistence.csproj": {}
+  },
+  "projects": {
+    "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Application/FCI.CleanEgypt.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Application/FCI.CleanEgypt.Application.csproj",
+        "projectName": "FCI.CleanEgypt.Application",
+        "projectPath": "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Application/FCI.CleanEgypt.Application.csproj",
+        "packagesPath": "/home/eng-cocu/.nuget/packages/",
+        "outputPath": "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/eng-cocu/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Contracts/FCI.CleanEgypt.Contracts.csproj": {
+                "projectPath": "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Contracts/FCI.CleanEgypt.Contracts.csproj"
+              },
+              "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/FCI.CleanEgypt.Domain.csproj": {
+                "projectPath": "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/FCI.CleanEgypt.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.104/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Contracts/FCI.CleanEgypt.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Contracts/FCI.CleanEgypt.Contracts.csproj",
+        "projectName": "FCI.CleanEgypt.Contracts",
+        "projectPath": "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Contracts/FCI.CleanEgypt.Contracts.csproj",
+        "packagesPath": "/home/eng-cocu/.nuget/packages/",
+        "outputPath": "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Contracts/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/eng-cocu/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.9.1, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.104/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/FCI.CleanEgypt.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/FCI.CleanEgypt.Domain.csproj",
+        "projectName": "FCI.CleanEgypt.Domain",
+        "projectPath": "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/FCI.CleanEgypt.Domain.csproj",
+        "packagesPath": "/home/eng-cocu/.nuget/packages/",
+        "outputPath": "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/eng-cocu/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.104/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Persistence/FCI.CleanEgypt.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Persistence/FCI.CleanEgypt.Persistence.csproj",
+        "projectName": "FCI.CleanEgypt.Persistence",
+        "projectPath": "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Persistence/FCI.CleanEgypt.Persistence.csproj",
+        "packagesPath": "/home/eng-cocu/.nuget/packages/",
+        "outputPath": "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Persistence/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/eng-cocu/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Application/FCI.CleanEgypt.Application.csproj": {
+                "projectPath": "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Application/FCI.CleanEgypt.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.104/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

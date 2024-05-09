@@ -1,0 +1,6 @@
+@FCI.CleanEgypt.WebApi_HostAddress = http://localhost:5289
+
+GET {{FCI.CleanEgypt.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

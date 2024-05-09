@@ -1,0 +1,12 @@
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/bin/Debug/net8.0/FCI.CleanEgypt.Domain.deps.json
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/bin/Debug/net8.0/FCI.CleanEgypt.Domain.dll
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/bin/Debug/net8.0/FCI.CleanEgypt.Domain.pdb
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/obj/Debug/net8.0/FCI.CleanEgypt.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/obj/Debug/net8.0/FCI.CleanEgypt.Domain.AssemblyInfoInputs.cache
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/obj/Debug/net8.0/FCI.CleanEgypt.Domain.AssemblyInfo.cs
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/obj/Debug/net8.0/FCI.CleanEgypt.Domain.csproj.CoreCompileInputs.cache
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/obj/Debug/net8.0/FCI.CleanEgypt.Domain.dll
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/obj/Debug/net8.0/refint/FCI.CleanEgypt.Domain.dll
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/obj/Debug/net8.0/FCI.CleanEgypt.Domain.pdb
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/obj/Debug/net8.0/ref/FCI.CleanEgypt.Domain.dll
+/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/obj/Debug/net8.0/FCI.CleanEgypt.Domain.csproj.AssemblyReference.cache
