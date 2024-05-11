@@ -43,7 +43,7 @@ public class ApiBaseController : ControllerBase
         Error error,
         Error[]? errors = null)
     {
-        return new ProblemDetails()
+        return new ProblemDetails
         {
             Title = title,
             Status = status,

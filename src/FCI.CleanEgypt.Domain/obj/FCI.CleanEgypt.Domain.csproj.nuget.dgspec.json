@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/FCI.CleanEgypt.Domain.csproj": {}
+    "/home/eng-cocu/Desktop/Project/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/FCI.CleanEgypt.Domain.csproj": {}
   },
   "projects": {
-    "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/FCI.CleanEgypt.Domain.csproj": {
+    "/home/eng-cocu/Desktop/Project/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/FCI.CleanEgypt.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/FCI.CleanEgypt.Domain.csproj",
+        "projectUniqueName": "/home/eng-cocu/Desktop/Project/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/FCI.CleanEgypt.Domain.csproj",
         "projectName": "FCI.CleanEgypt.Domain",
-        "projectPath": "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/FCI.CleanEgypt.Domain.csproj",
+        "projectPath": "/home/eng-cocu/Desktop/Project/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/FCI.CleanEgypt.Domain.csproj",
         "packagesPath": "/home/eng-cocu/.nuget/packages/",
-        "outputPath": "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/obj/",
+        "outputPath": "/home/eng-cocu/Desktop/Project/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/eng-cocu/.nuget/NuGet/NuGet.Config"

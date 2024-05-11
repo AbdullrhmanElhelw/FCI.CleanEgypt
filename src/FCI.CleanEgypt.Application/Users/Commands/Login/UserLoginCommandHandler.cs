@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Identity;
 namespace FCI.CleanEgypt.Application.Users.Commands.Login;
 
 public sealed class UserLoginCommandHandler
-    : ICommandHandler<UserLoginCommand, TokenResponse>
+    : ICommandHandler<UserLoginCommand>
 {
     private readonly IJwtProvider _jwtProvider;
     private readonly UserManager<BaseIdentityEntity> _userManager;
@@ -21,7 +21,7 @@ public sealed class UserLoginCommandHandler
         _jwtProvider = jwtProvider;
     }
 
-    public async Task<Result<TokenResponse>> Handle(UserLoginCommand request, CancellationToken cancellationToken)
+    public async Task<Result> Handle(UserLoginCommand request, CancellationToken cancellationToken)
     {
         var checkUserIsExists = await _userManager.FindByEmailAsync(request.Email);
 

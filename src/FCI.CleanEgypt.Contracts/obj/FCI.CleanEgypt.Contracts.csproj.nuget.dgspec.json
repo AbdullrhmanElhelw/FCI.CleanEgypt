@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Contracts/FCI.CleanEgypt.Contracts.csproj": {}
+    "/home/eng-cocu/Desktop/Project/FCI.CleanEgypt/src/FCI.CleanEgypt.Contracts/FCI.CleanEgypt.Contracts.csproj": {}
   },
   "projects": {
-    "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Contracts/FCI.CleanEgypt.Contracts.csproj": {
+    "/home/eng-cocu/Desktop/Project/FCI.CleanEgypt/src/FCI.CleanEgypt.Contracts/FCI.CleanEgypt.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Contracts/FCI.CleanEgypt.Contracts.csproj",
+        "projectUniqueName": "/home/eng-cocu/Desktop/Project/FCI.CleanEgypt/src/FCI.CleanEgypt.Contracts/FCI.CleanEgypt.Contracts.csproj",
         "projectName": "FCI.CleanEgypt.Contracts",
-        "projectPath": "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Contracts/FCI.CleanEgypt.Contracts.csproj",
+        "projectPath": "/home/eng-cocu/Desktop/Project/FCI.CleanEgypt/src/FCI.CleanEgypt.Contracts/FCI.CleanEgypt.Contracts.csproj",
         "packagesPath": "/home/eng-cocu/.nuget/packages/",
-        "outputPath": "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Contracts/obj/",
+        "outputPath": "/home/eng-cocu/Desktop/Project/FCI.CleanEgypt/src/FCI.CleanEgypt.Contracts/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/eng-cocu/.nuget/NuGet/NuGet.Config"
@@ -45,6 +45,34 @@
             "MediatR": {
               "target": "Package",
               "version": "[12.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Serilog.Enrichers.Environment": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Serilog.Enrichers.Process": {
+              "target": "Package",
+              "version": "[2.0.2, )"
+            },
+            "Serilog.Enrichers.Thread": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Serilog.Settings.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Serilog.Sinks.MSSqlServer": {
+              "target": "Package",
+              "version": "[6.6.0, )"
             }
           },
           "imports": [

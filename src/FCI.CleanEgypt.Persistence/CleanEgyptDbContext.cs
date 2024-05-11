@@ -1,7 +1,9 @@
 using System.Reflection;
-using FCI.CleanEgypt.Contracts.Database;
+using FCI.CleanEgypt.Application;
 using FCI.CleanEgypt.Contracts.UnitOfWork;
 using FCI.CleanEgypt.Domain.Common;
+using FCI.CleanEgypt.Domain.Entities.Events;
+using FCI.CleanEgypt.Domain.Entities.Users;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -13,6 +15,8 @@ public sealed class CleanEgyptDbContext(DbContextOptions<CleanEgyptDbContext> op
         , ICleanEgyptDbContext
         , IUnitOfWork
 {
+    public DbSet<Event> Events => Set<Event>();
+
     public async Task<int> SaveChangesAsync()
     {
         return await base.SaveChangesAsync();

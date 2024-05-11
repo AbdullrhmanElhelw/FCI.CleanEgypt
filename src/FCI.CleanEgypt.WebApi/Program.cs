@@ -2,6 +2,7 @@ using FCI.CleanEgypt.Application;
 using FCI.CleanEgypt.Infrastructure;
 using FCI.CleanEgypt.Persistence;
 using FCI.CleanEgypt.WebApi.Identity;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,7 @@ builder.Services.AddPersistence(builder.Configuration)
     .AddIdentityUsers()
     .AddAuthorizationPolices();
 
+builder.Host.UseSerilog((context, configuration) => { configuration.ReadFrom.Configuration(context.Configuration); });
 
 var app = builder.Build();
 
@@ -29,6 +31,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseSerilogRequestLogging();
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();

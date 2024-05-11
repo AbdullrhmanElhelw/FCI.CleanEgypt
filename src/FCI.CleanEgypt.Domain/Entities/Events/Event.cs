@@ -30,4 +30,16 @@ public sealed class Event : BaseEntity
             Detalis = details
         };
     }
+
+    public static Event Update(
+        Event @event,
+        string name,
+        DateTime date,
+        string details)
+    {
+        @event.Name = name;
+        @event.Date = date;
+        @event.Detalis = details;
+        return @event;
+    }
 }

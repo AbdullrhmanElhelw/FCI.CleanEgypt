@@ -10,7 +10,9 @@ public sealed class UserLoginCommandValidator : AbstractValidator<UserLoginComma
     {
         RuleFor(x => x.Email)
             .NotEmpty()
-            .WithError(ValidationErrors.Login.EmailIsRequired);
+            .WithError(ValidationErrors.Login.EmailIsRequired)
+            .EmailAddress()
+            .WithError(ValidationErrors.Login.IsEmail);
 
         RuleFor(x => x.Password)
             .NotEmpty()

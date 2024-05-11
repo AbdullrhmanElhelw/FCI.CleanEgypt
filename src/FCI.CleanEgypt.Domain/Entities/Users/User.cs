@@ -15,8 +15,8 @@ public sealed class User : BaseIdentityEntity
         _pins = [];
     }
 
-    public Image? ProfilePicture { get; }
-    public Point? Points { get; }
+    public Image? ProfilePicture { get; private set; }
+    public Point? Points { get; private set; }
 
     public IReadOnlyCollection<UserEvent> UserEvents => _userEvents;
     public IReadOnlyCollection<Pin> Pins => _pins;
@@ -41,4 +41,11 @@ public sealed class User : BaseIdentityEntity
             UserName = email[..email.IndexOf('@')]
         };
     }
+    
+    public static User SetProfilePicture(User user, Image image)
+    {
+        user.ProfilePicture = image;
+        return user;
+    }
+    
 }

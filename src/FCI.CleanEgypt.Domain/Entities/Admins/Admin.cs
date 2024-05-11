@@ -14,4 +14,24 @@ public sealed class Admin : BaseIdentityEntity
 
     public Image? ProfilePicture { get; }
     public IReadOnlyCollection<Pin> Pins => _pins;
+
+    public static Admin Create(
+        string fName,
+        string lName,
+        string city,
+        string street,
+        DateTime dateOfBirth,
+        string email)
+    {
+        return new Admin
+        {
+            FirstName = fName,
+            LastName = lName,
+            City = city,
+            Street = street,
+            DateOfBirth = dateOfBirth,
+            Email = email,
+            UserName = email[..email.IndexOf('@')]
+        };
+    }
 }

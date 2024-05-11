@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZP8d5nrHBeTq2uB2HXOIW37n8G2LL/48kTGgiiVEsPl51yu9dduGBKlpvr7dH0F4+y+jSG9v/PHP+niuJEXw3A==",
+  "dgSpecHash": "AEHzIZ/6oPsaT7W0TEhidNClMME6ehanEX0UPzo2V5Aja0P7bituoLNS79H///7whlqvfhK5DeKHuFasMz/BlA==",
   "success": true,
-  "projectFilePath": "/home/eng-cocu/RiderProjects/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/FCI.CleanEgypt.Domain.csproj",
+  "projectFilePath": "/home/eng-cocu/Desktop/Project/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/FCI.CleanEgypt.Domain.csproj",
   "expectedPackageFiles": [
     "/home/eng-cocu/.nuget/packages/microsoft.aspnetcore.cryptography.internal/8.0.4/microsoft.aspnetcore.cryptography.internal.8.0.4.nupkg.sha512",
     "/home/eng-cocu/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/8.0.4/microsoft.aspnetcore.cryptography.keyderivation.8.0.4.nupkg.sha512",
