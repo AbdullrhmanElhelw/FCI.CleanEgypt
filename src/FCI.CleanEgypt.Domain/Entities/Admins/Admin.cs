@@ -20,7 +20,7 @@ public sealed class Admin : BaseIdentityEntity
         string lName,
         string city,
         string street,
-        DateTime dateOfBirth,
+        DateOnly dateOfBirth,
         string email)
     {
         return new Admin

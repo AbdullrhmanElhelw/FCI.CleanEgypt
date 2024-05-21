@@ -30,12 +30,14 @@ public sealed class CreateUserCommandHandler
         if (checkUserIsExists is not null)
             return Result.Fail<TokenResponse>("User Is Already Exists");
 
+        var requestDateOfBirth = new DateOnly(request.Year, request.Month, request.Day);
+
         var userToCreate = User.Create(
             request.FirstName,
             request.LastName,
             request.City,
             request.Street,
-            request.DateOfBirth,
+            requestDateOfBirth,
             request.Email
         );
 

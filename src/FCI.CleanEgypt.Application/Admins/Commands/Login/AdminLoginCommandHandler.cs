@@ -1,4 +1,3 @@
-using System.Security.Claims;
 using FCI.CleanEgypt.Contracts.ApiResponse.Results;
 using FCI.CleanEgypt.Contracts.Authentication;
 using FCI.CleanEgypt.Contracts.Authentication.Jwt;
@@ -6,6 +5,7 @@ using FCI.CleanEgypt.Contracts.CQRS.Commands;
 using FCI.CleanEgypt.Domain.Common;
 using FCI.CleanEgypt.Domain.Enums;
 using Microsoft.AspNetCore.Identity;
+using System.Security.Claims;
 
 namespace FCI.CleanEgypt.Application.Admins.Commands.Login;
 
@@ -33,7 +33,6 @@ public sealed class AdminLoginCommandHandler
 
         var claims = new List<Claim>
         {
-            new(ClaimTypes.Email, request.Email),
             new(ClaimTypes.NameIdentifier, checkAdminIsExists.Id.ToString()),
             new(ClaimTypes.Role, nameof(AppRoles.Admin))
         };

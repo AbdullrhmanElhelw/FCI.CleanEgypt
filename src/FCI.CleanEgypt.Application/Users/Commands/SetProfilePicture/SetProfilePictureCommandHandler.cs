@@ -22,11 +22,12 @@ public sealed class SetProfilePictureCommandHandler : ICommandHandler<SetProfile
         if (findUserIsExists is null)
             return Result.Fail(DatabaseErrors.Users.UserIsNotExist(request.UserId));
 
-
         using var memoryStream = new MemoryStream();
         await request.Picture.CopyToAsync(memoryStream, cancellationToken);
 
-        var image = new Image(memoryStream.ToArray(), Path.GetExtension(request.Picture.FileName));
+        var image = Image.Create(request.Picture.FileName,
+                                 request.Picture.ContentType,
+                                 memoryStream.ToArray());
 
         var user = User.SetProfilePicture(findUserIsExists, image);
 

@@ -32,6 +32,10 @@ internal static class ValidationErrors
         internal static Error CityIsRequired => new("The City is required.");
 
         internal static Error StreetIsRequired => new("The Street is required.");
+
+        internal static Error DateOfBirthIsRequired => new("The Date of Birth is required.");
+
+        internal static Error DateOfBirthInThePast => new("The Date of Birth must be in the past.");
     }
 
     internal static class CreateAdmin
@@ -67,7 +71,6 @@ internal static class ValidationErrors
         internal static Error EventIsNotExists => new("Event is not exists");
     }
 
-
     internal static class SetProfilePicture
     {
         internal static Error UserIdIsRequired => new("The user identifier is required.");
@@ -77,5 +80,31 @@ internal static class ValidationErrors
         internal static Error PictureSizeExceeds5Mb => new("The picture size must not exceed 5MB.");
 
         internal static Error PictureMustBeInJpegOrPngFormat => new("The picture must be in JPEG or PNG format.");
+    }
+
+    internal static class CreatePin
+    {
+        internal static Error UserIdIsRequired => new("The user identifier is required.");
+
+        internal static Error CityIsRequired => new("The city is required.");
+
+        internal static Error StreetIsRequired => new("The street is required.");
+    }
+
+    internal static class UpdatePin
+    {
+        internal static Error UserIdIsRequired => new("The user identifier is required.");
+
+        internal static Error PinIdIsRequired => new("The pin identifier is required.");
+
+        internal static Error CityIsRequired => new("The city is required.");
+
+        internal static Error CityMaxLength => new("The city must not exceed 50 characters.");
+
+        internal static Error StreetIsRequired => new("The street is required.");
+
+        internal static Error StreetMaxLength => new("The street must not exceed 100 characters.");
+
+        internal static Error DescriptionIsRequired => new("The description is required.");
     }
 }

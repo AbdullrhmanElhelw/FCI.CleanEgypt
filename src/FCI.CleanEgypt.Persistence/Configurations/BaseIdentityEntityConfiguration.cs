@@ -35,6 +35,7 @@ internal sealed class BaseIdentityEntityConfiguration : IEntityTypeConfiguration
             .IsRequired();
 
         builder.Property(e => e.DateOfBirth)
+            .HasColumnType("date")
             .IsRequired();
     }
 }

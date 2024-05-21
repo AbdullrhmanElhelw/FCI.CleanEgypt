@@ -1,0 +1,13 @@
+C:\Users\20912020100682\Desktop\Projects\FCI.CleanEgypt\src\FCI.CleanEgypt.Contracts\bin\Release\net8.0\FCI.CleanEgypt.Contracts.deps.json
+C:\Users\20912020100682\Desktop\Projects\FCI.CleanEgypt\src\FCI.CleanEgypt.Contracts\bin\Release\net8.0\FCI.CleanEgypt.Contracts.dll
+C:\Users\20912020100682\Desktop\Projects\FCI.CleanEgypt\src\FCI.CleanEgypt.Contracts\bin\Release\net8.0\FCI.CleanEgypt.Contracts.pdb
+C:\Users\20912020100682\Desktop\Projects\FCI.CleanEgypt\src\FCI.CleanEgypt.Contracts\obj\Release\net8.0\FCI.CleanEgypt.Contracts.csproj.AssemblyReference.cache
+C:\Users\20912020100682\Desktop\Projects\FCI.CleanEgypt\src\FCI.CleanEgypt.Contracts\obj\Release\net8.0\FCI.CleanEgypt.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\20912020100682\Desktop\Projects\FCI.CleanEgypt\src\FCI.CleanEgypt.Contracts\obj\Release\net8.0\FCI.CleanEgypt.Contracts.AssemblyInfoInputs.cache
+C:\Users\20912020100682\Desktop\Projects\FCI.CleanEgypt\src\FCI.CleanEgypt.Contracts\obj\Release\net8.0\FCI.CleanEgypt.Contracts.AssemblyInfo.cs
+C:\Users\20912020100682\Desktop\Projects\FCI.CleanEgypt\src\FCI.CleanEgypt.Contracts\obj\Release\net8.0\FCI.CleanEgypt.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\20912020100682\Desktop\Projects\FCI.CleanEgypt\src\FCI.CleanEgypt.Contracts\obj\Release\net8.0\FCI.CleanEgypt.Contracts.sourcelink.json
+C:\Users\20912020100682\Desktop\Projects\FCI.CleanEgypt\src\FCI.CleanEgypt.Contracts\obj\Release\net8.0\FCI.CleanEgypt.Contracts.dll
+C:\Users\20912020100682\Desktop\Projects\FCI.CleanEgypt\src\FCI.CleanEgypt.Contracts\obj\Release\net8.0\refint\FCI.CleanEgypt.Contracts.dll
+C:\Users\20912020100682\Desktop\Projects\FCI.CleanEgypt\src\FCI.CleanEgypt.Contracts\obj\Release\net8.0\FCI.CleanEgypt.Contracts.pdb
+C:\Users\20912020100682\Desktop\Projects\FCI.CleanEgypt\src\FCI.CleanEgypt.Contracts\obj\Release\net8.0\ref\FCI.CleanEgypt.Contracts.dll

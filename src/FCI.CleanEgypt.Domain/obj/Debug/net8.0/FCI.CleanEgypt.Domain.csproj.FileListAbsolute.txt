@@ -23,3 +23,16 @@
 /home/eng-cocu/Desktop/Project/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/obj/Debug/net8.0/refint/FCI.CleanEgypt.Domain.dll
 /home/eng-cocu/Desktop/Project/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/obj/Debug/net8.0/FCI.CleanEgypt.Domain.pdb
 /home/eng-cocu/Desktop/Project/FCI.CleanEgypt/src/FCI.CleanEgypt.Domain/obj/Debug/net8.0/ref/FCI.CleanEgypt.Domain.dll
+C:\Users\20912020100682\Desktop\Projects\FCI.CleanEgypt\src\FCI.CleanEgypt.Domain\bin\Debug\net8.0\FCI.CleanEgypt.Domain.deps.json
+C:\Users\20912020100682\Desktop\Projects\FCI.CleanEgypt\src\FCI.CleanEgypt.Domain\bin\Debug\net8.0\FCI.CleanEgypt.Domain.dll
+C:\Users\20912020100682\Desktop\Projects\FCI.CleanEgypt\src\FCI.CleanEgypt.Domain\bin\Debug\net8.0\FCI.CleanEgypt.Domain.pdb
+C:\Users\20912020100682\Desktop\Projects\FCI.CleanEgypt\src\FCI.CleanEgypt.Domain\obj\Debug\net8.0\FCI.CleanEgypt.Domain.csproj.AssemblyReference.cache
+C:\Users\20912020100682\Desktop\Projects\FCI.CleanEgypt\src\FCI.CleanEgypt.Domain\obj\Debug\net8.0\FCI.CleanEgypt.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\20912020100682\Desktop\Projects\FCI.CleanEgypt\src\FCI.CleanEgypt.Domain\obj\Debug\net8.0\FCI.CleanEgypt.Domain.AssemblyInfoInputs.cache
+C:\Users\20912020100682\Desktop\Projects\FCI.CleanEgypt\src\FCI.CleanEgypt.Domain\obj\Debug\net8.0\FCI.CleanEgypt.Domain.AssemblyInfo.cs
+C:\Users\20912020100682\Desktop\Projects\FCI.CleanEgypt\src\FCI.CleanEgypt.Domain\obj\Debug\net8.0\FCI.CleanEgypt.Domain.csproj.CoreCompileInputs.cache
+C:\Users\20912020100682\Desktop\Projects\FCI.CleanEgypt\src\FCI.CleanEgypt.Domain\obj\Debug\net8.0\FCI.CleanEgypt.Domain.sourcelink.json
+C:\Users\20912020100682\Desktop\Projects\FCI.CleanEgypt\src\FCI.CleanEgypt.Domain\obj\Debug\net8.0\FCI.CleanEgypt.Domain.dll
+C:\Users\20912020100682\Desktop\Projects\FCI.CleanEgypt\src\FCI.CleanEgypt.Domain\obj\Debug\net8.0\refint\FCI.CleanEgypt.Domain.dll
+C:\Users\20912020100682\Desktop\Projects\FCI.CleanEgypt\src\FCI.CleanEgypt.Domain\obj\Debug\net8.0\FCI.CleanEgypt.Domain.pdb
+C:\Users\20912020100682\Desktop\Projects\FCI.CleanEgypt\src\FCI.CleanEgypt.Domain\obj\Debug\net8.0\ref\FCI.CleanEgypt.Domain.dll

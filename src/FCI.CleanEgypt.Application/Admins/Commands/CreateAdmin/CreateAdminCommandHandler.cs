@@ -25,12 +25,14 @@ public sealed class CreateAdminCommandHandler
         if (checkAdminIsExists is not null)
             return Result.Fail("User is Already Exists");
 
+        var requestDateOfBirth = new DateOnly(request.Year, request.Month, request.Day);
+
         var adminToCreate = Admin.Create(
             request.FirstName,
             request.LastName,
             request.City,
             request.Street,
-            request.DateOfBirth,
+            requestDateOfBirth,
             request.Email);
 
         var createAdminResult = await _userManager.CreateAsync(adminToCreate, request.Password);

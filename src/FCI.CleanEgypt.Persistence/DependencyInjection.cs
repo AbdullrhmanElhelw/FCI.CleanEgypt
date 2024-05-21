@@ -1,6 +1,7 @@
 using FCI.CleanEgypt.Application;
 using FCI.CleanEgypt.Contracts.UnitOfWork;
 using FCI.CleanEgypt.Domain.Entities.Events;
+using FCI.CleanEgypt.Domain.Entities.Pins;
 using FCI.CleanEgypt.Persistence.Infrastructure;
 using FCI.CleanEgypt.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -28,6 +29,7 @@ public static class DependencyInjection
             sp.GetRequiredService<CleanEgyptDbContext>());
 
         services.AddScoped<IEventRepository, EventRepository>();
+        services.AddScoped<IPinRepository, PinRepository>();
 
         return services;
     }

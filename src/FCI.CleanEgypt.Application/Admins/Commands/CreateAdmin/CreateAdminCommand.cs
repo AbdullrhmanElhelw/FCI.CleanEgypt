@@ -7,6 +7,8 @@ public sealed record CreateAdminCommand(
     string LastName,
     string City,
     string Street,
-    DateTime DateOfBirth,
+    int Year,
+    int Month,
+    int Day,
     string Email,
     string Password) : ICommand;

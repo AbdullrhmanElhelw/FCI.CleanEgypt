@@ -8,11 +8,8 @@ namespace FCI.CleanEgypt.WebApi.Controllers;
 
 [Route(ApiRoutes.Admin.Base)]
 [ApiController]
-//[Authorize(Roles = nameof(AppRoles.Admin))]
 public class AdminController : ApiBaseController
 {
-    //private readonly IHttpContextAccessor _httpContextAccessor;
-
     public AdminController(ISender sender)
         : base(sender)
     {

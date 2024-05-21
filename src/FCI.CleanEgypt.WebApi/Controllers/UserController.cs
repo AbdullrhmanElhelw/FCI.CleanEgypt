@@ -1,40 +1,71 @@
+using FCI.CleanEgypt.Application.Core.Helpers;
 using FCI.CleanEgypt.Application.Users.Commands.CreateUser;
 using FCI.CleanEgypt.Application.Users.Commands.Login;
 using FCI.CleanEgypt.Application.Users.Commands.SetProfilePicture;
+using FCI.CleanEgypt.Application.Users.Queries.GetProfilePicture;
+using FCI.CleanEgypt.Domain.Enums;
 using FCI.CleanEgypt.WebApi.Routes;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FCI.CleanEgypt.WebApi.Controllers;
 
 [Route(ApiRoutes.Users.Base)]
 [ApiController]
+[Authorize(Roles = nameof(AppRoles.User))]
 public class UserController : ApiBaseController
 {
-    public UserController(ISender sender) : base(sender)
+    private readonly UserUtility _userUtility;
+
+    public UserController(ISender sender, UserUtility userUtility)
+        : base(sender)
     {
+        _userUtility = userUtility;
     }
 
+    [AllowAnonymous]
     [HttpPost(ApiRoutes.Users.Register)]
-    public async Task<IActionResult> CreateUser([FromBody] CreateUserCommand command)
+    public async Task<IActionResult> CreateUser([FromForm] CreateUserCommand command)
     {
         var result = await _sender.Send(command);
         return result.IsSuccess ? Ok(result) : HandleFailure(result);
     }
 
+    [AllowAnonymous]
     [HttpPost(ApiRoutes.Users.Login)]
-    public async Task<IActionResult> Login([FromBody] UserLoginCommand command)
+    public async Task<IActionResult> Login([FromForm] UserLoginCommand command)
     {
-        var result = await _sender.Send(command);
+        var result = await _sender.Send(new UserLoginCommand(command.Email, command.Password));
         return result.IsSuccess ? Ok(result) : HandleFailure(result);
     }
-    
-    [HttpPost("set-profile-picture/{userId:guid}")]
-    public async Task<IActionResult> SetProfilePicture(Guid userId, IFormFile file)
+
+    [HttpPost(ApiRoutes.Users.SetProfilePicture)]
+    public async Task<IActionResult> SetProfilePicture(IFormFile file)
     {
-        var command = new SetProfilePictureCommand(userId, file);
-        var result = await _sender.Send(command);
+        var userId = Guid.TryParse(_userUtility.GetUserId(), out var id) ? id : Guid.Empty;
+
+        if (userId == Guid.Empty)
+            return Unauthorized();
+
+        var result = await _sender.Send(new SetProfilePictureCommand(userId, file));
         return result.IsSuccess ? Ok(result) : HandleFailure(result);
     }
-    
+
+    [HttpGet(ApiRoutes.Users.GetProfilePicture)]
+    public async Task<IActionResult> GetProfilePicture()
+    {
+        var userId = Guid.TryParse(_userUtility.GetUserId(), out var id) ? id : Guid.Empty;
+
+        if (userId == Guid.Empty)
+            return Unauthorized();
+
+        var result = await _sender.Send(new GetProfilePictureQuery(userId));
+        if (result.Value is null)
+            return NotFound();
+
+        var file = File(result.Value.Data, "application/octet-stream", result.Value.FileName);
+
+        return result.IsSuccess ? file : HandleFailure(result);
+    }
 }

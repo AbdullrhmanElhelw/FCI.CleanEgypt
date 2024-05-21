@@ -42,8 +42,8 @@ namespace FCI.CleanEgypt.Persistence.Migrations
                     b.Property<DateTime>("CreatedOnUtc")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("DateOfBirth")
-                        .HasColumnType("datetime2");
+                    b.Property<DateOnly>("DateOfBirth")
+                        .HasColumnType("date");
 
                     b.Property<DateTime?>("DeletedOnUtc")
                         .HasColumnType("datetime2");
@@ -166,7 +166,7 @@ namespace FCI.CleanEgypt.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("AdminId")
+                    b.Property<Guid?>("AdminId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("City")
@@ -179,6 +179,16 @@ namespace FCI.CleanEgypt.Persistence.Migrations
 
                     b.Property<DateTime?>("DeletedOnUtc")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<bool>("IsApproved")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -210,18 +220,6 @@ namespace FCI.CleanEgypt.Persistence.Migrations
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedOnUtc")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DeletedOnUtc")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime?>("ModifiedOnUtc")
-                        .HasColumnType("datetime2");
 
                     b.HasKey("EventId", "UserId");
 
@@ -380,8 +378,7 @@ namespace FCI.CleanEgypt.Persistence.Migrations
                     b.HasOne("FCI.CleanEgypt.Domain.Entities.Admins.Admin", "Admin")
                         .WithMany("Pins")
                         .HasForeignKey("AdminId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("FCI.CleanEgypt.Domain.Entities.Users.User", "User")
                         .WithMany("Pins")
@@ -389,7 +386,36 @@ namespace FCI.CleanEgypt.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.OwnsOne("FCI.CleanEgypt.Domain.Entities.Pins.Image", "Image", b1 =>
+                        {
+                            b1.Property<Guid>("PinId")
+                                .HasColumnType("uniqueidentifier");
+
+                            b1.Property<string>("ContentType")
+                                .IsRequired()
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)");
+
+                            b1.Property<byte[]>("Data")
+                                .IsRequired()
+                                .HasColumnType("varbinary(max)");
+
+                            b1.Property<string>("FileName")
+                                .IsRequired()
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)");
+
+                            b1.HasKey("PinId");
+
+                            b1.ToTable("Pins");
+
+                            b1.WithOwner()
+                                .HasForeignKey("PinId");
+                        });
+
                     b.Navigation("Admin");
+
+                    b.Navigation("Image");
 
                     b.Navigation("User");
                 });
@@ -477,11 +503,15 @@ namespace FCI.CleanEgypt.Persistence.Migrations
                             b1.Property<Guid>("AdminId")
                                 .HasColumnType("uniqueidentifier");
 
-                            b1.Property<string>("Content")
+                            b1.Property<string>("ContentType")
                                 .IsRequired()
                                 .HasColumnType("nvarchar(max)");
 
-                            b1.Property<string>("Extension")
+                            b1.Property<byte[]>("Data")
+                                .IsRequired()
+                                .HasColumnType("varbinary(max)");
+
+                            b1.Property<string>("FileName")
                                 .IsRequired()
                                 .HasColumnType("nvarchar(max)");
 
@@ -509,11 +539,15 @@ namespace FCI.CleanEgypt.Persistence.Migrations
                             b1.Property<Guid>("UserId")
                                 .HasColumnType("uniqueidentifier");
 
-                            b1.Property<byte[]>("Content")
+                            b1.Property<string>("ContentType")
+                                .IsRequired()
+                                .HasColumnType("nvarchar(max)");
+
+                            b1.Property<byte[]>("Data")
                                 .IsRequired()
                                 .HasColumnType("varbinary(max)");
 
-                            b1.Property<string>("Extention")
+                            b1.Property<string>("FileName")
                                 .IsRequired()
                                 .HasColumnType("nvarchar(max)");
 

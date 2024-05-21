@@ -14,7 +14,7 @@ public abstract class BaseIdentityEntity : IdentityUser<Guid>, ISoftDeleteEntity
     public string LastName { get; protected set; }
     public string City { get; protected set; }
     public string Street { get; protected set; }
-    public DateTime DateOfBirth { get; protected set; }
+    public DateOnly DateOfBirth { get; protected set; }
 
     public DateTime CreatedOnUtc { get; protected set; }
 

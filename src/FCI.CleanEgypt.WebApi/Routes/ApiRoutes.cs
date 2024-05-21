@@ -7,6 +7,8 @@ public static class ApiRoutes
         public const string Base = "api/users";
         public const string Register = "register";
         public const string Login = "login";
+        public const string SetProfilePicture = "set-profile-picture";
+        public const string GetProfilePicture = "get-profile-picture";
     }
 
     public static class Admin
@@ -23,5 +25,14 @@ public static class ApiRoutes
         public const string Update = "update/{eventId:guid}";
         public const string GetAll = "get-all/{pageNumber:int}/{pageSize:int}";
         public const string GetById = "get-event/{eventId:guid}";
+    }
+
+    public static class Pins
+    {
+        public const string Base = "api/pins";
+        public const string Create = "create";
+        public const string Get = "get/{pinId:guid}";
+        public const string GetAll = "get-all/{pageNumber:int}/{pageSize:int}";
+        public const string Update = "update/{pinId:guid}";
     }
 }

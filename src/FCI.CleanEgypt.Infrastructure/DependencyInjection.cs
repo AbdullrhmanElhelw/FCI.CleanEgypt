@@ -1,4 +1,3 @@
-using System.Text;
 using FCI.CleanEgypt.Contracts.Authentication.Jwt;
 using FCI.CleanEgypt.Domain.Enums;
 using FCI.CleanEgypt.Infrastructure.Authentication;
@@ -6,6 +5,7 @@ using FCI.CleanEgypt.Infrastructure.Authentication.Settings;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace FCI.CleanEgypt.Infrastructure;
 
@@ -48,11 +48,9 @@ public static class DependencyInjection
 
     public static IServiceCollection AddAuthorizationPolices(this IServiceCollection services)
     {
-        services.AddAuthorization(op =>
-        {
-            op.AddPolicy(nameof(AppRoles.Admin), policy => policy.RequireRole(nameof(AppRoles.Admin)));
-            op.AddPolicy(nameof(AppRoles.User), policy => policy.RequireRole(nameof(AppRoles.User)));
-        });
+        services.AddAuthorizationBuilder()
+            .AddPolicy(nameof(AppRoles.Admin), policy => policy.RequireRole(nameof(AppRoles.Admin)))
+            .AddPolicy(nameof(AppRoles.User), policy => policy.RequireRole(nameof(AppRoles.User)));
         return services;
     }
 }

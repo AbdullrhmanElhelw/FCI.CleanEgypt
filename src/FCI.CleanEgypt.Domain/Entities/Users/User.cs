@@ -27,7 +27,7 @@ public sealed class User : BaseIdentityEntity
         string lastName,
         string city,
         string street,
-        DateTime dateOfBirth,
+        DateOnly dateOfBirth,
         string email)
     {
         return new User
@@ -41,11 +41,10 @@ public sealed class User : BaseIdentityEntity
             UserName = email[..email.IndexOf('@')]
         };
     }
-    
+
     public static User SetProfilePicture(User user, Image image)
     {
         user.ProfilePicture = image;
         return user;
     }
-    
 }

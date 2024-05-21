@@ -3780,24 +3780,26 @@
     ]
   },
   "packageFolders": {
-    "/home/eng-cocu/.nuget/packages/": {}
+    "C:\\Users\\20912020100682\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/eng-cocu/Desktop/Project/FCI.CleanEgypt/src/FCI.CleanEgypt.Contracts/FCI.CleanEgypt.Contracts.csproj",
+      "projectUniqueName": "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Contracts\\FCI.CleanEgypt.Contracts.csproj",
       "projectName": "FCI.CleanEgypt.Contracts",
-      "projectPath": "/home/eng-cocu/Desktop/Project/FCI.CleanEgypt/src/FCI.CleanEgypt.Contracts/FCI.CleanEgypt.Contracts.csproj",
-      "packagesPath": "/home/eng-cocu/.nuget/packages/",
-      "outputPath": "/home/eng-cocu/Desktop/Project/FCI.CleanEgypt/src/FCI.CleanEgypt.Contracts/obj/",
+      "projectPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Contracts\\FCI.CleanEgypt.Contracts.csproj",
+      "packagesPath": "C:\\Users\\20912020100682\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Contracts\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/eng-cocu/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\20912020100682\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3810,6 +3812,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3869,7 +3876,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.104/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

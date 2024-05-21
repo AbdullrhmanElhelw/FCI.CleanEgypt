@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "0rxF8VIX25CymaGB8XqnVn2EHl3HbIP10NOKqUmuP5U=",
+  "Source": "FCI.CleanEgypt.WebApi",
+  "BasePath": "_content/FCI.CleanEgypt.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

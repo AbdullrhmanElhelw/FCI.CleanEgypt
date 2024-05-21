@@ -1,12 +1,14 @@
-using System.Text.Json;
+using FCI.CleanEgypt.Application.Core.Helpers;
 using FCI.CleanEgypt.Application.Events.Commands.CreateEvent;
 using FCI.CleanEgypt.Application.Events.Commands.UpdateEvent;
 using FCI.CleanEgypt.Application.Events.Queries.GetAllEvents;
 using FCI.CleanEgypt.Application.Events.Queries.GetEventById;
-using FCI.CleanEgypt.Contracts.ApiResponse.Results;
+using FCI.CleanEgypt.Domain.Enums;
 using FCI.CleanEgypt.WebApi.Routes;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 
 namespace FCI.CleanEgypt.WebApi.Controllers;
 
@@ -14,11 +16,15 @@ namespace FCI.CleanEgypt.WebApi.Controllers;
 [ApiController]
 public class EventController : ApiBaseController
 {
-    public EventController(ISender sender) : base(sender)
+    private readonly UserUtility _userUtiltiy;
+
+    public EventController(ISender sender, UserUtility userUtiltiy) : base(sender)
     {
+        _userUtiltiy = userUtiltiy;
     }
 
     [HttpPost(ApiRoutes.Events.Create)]
+    [Authorize(Roles = nameof(AppRoles.Admin))]
     public async Task<IActionResult> Create([FromBody] CreateEventCommand command)
     {
         var result = await _sender.Send(command);
@@ -43,7 +49,7 @@ public class EventController : ApiBaseController
     [HttpPut(ApiRoutes.Events.Update)]
     public async Task<IActionResult> Update(Guid eventId, [FromBody] UpdateEventDto command)
     {
-        var result = await _sender.Send(new UpdateEventCommand(eventId,command.Name, command.Date, command.Details));
+        var result = await _sender.Send(new UpdateEventCommand(eventId, command.Name, command.Date, command.Details));
         return result.IsSuccess ? Ok(result) : HandleFailure(result);
     }
 }

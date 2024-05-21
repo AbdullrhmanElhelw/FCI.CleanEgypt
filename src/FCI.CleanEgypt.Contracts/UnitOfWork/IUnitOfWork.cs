@@ -2,5 +2,5 @@ namespace FCI.CleanEgypt.Contracts.UnitOfWork;
 
 public interface IUnitOfWork
 {
-    Task<int> SaveChangesAsync();
+    Task<int> SaveChangesAsync(CancellationToken cancellationToken = default!);
 }

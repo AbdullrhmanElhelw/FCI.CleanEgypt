@@ -23,14 +23,12 @@ public class EventRepository : IEventRepository
                                        x.Detalis.ToLower().Contains(searchTermLower));
         }
 
-
         return await events
             .OrderBy(x => x.Name)
             .Skip(pageSize * (pageNumber - 1))
             .Take(pageSize)
             .ToListAsync();
     }
-
 
     public async Task<int> EventCountAsync()
     {

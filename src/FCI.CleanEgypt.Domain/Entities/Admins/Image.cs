@@ -1,3 +1,3 @@
 namespace FCI.CleanEgypt.Domain.Entities.Admins;
 
-public record Image(string Content, string Extension);
+public sealed record Image(string FileName, string ContentType, byte[] Data);
