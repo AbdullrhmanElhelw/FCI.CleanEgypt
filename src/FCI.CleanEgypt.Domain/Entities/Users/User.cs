@@ -42,6 +42,23 @@ public sealed class User : BaseIdentityEntity
         };
     }
 
+    public static User Update
+    (
+        User user,
+        string firstName,
+        string lastName,
+        string city,
+        string street,
+        DateOnly dateOfBirth)
+    {
+        user.FirstName = firstName;
+        user.LastName = lastName;
+        user.City = city;
+        user.Street = street;
+        user.DateOfBirth = dateOfBirth;
+        return user;
+    }
+
     public static User SetProfilePicture(User user, Image image)
     {
         user.ProfilePicture = image;

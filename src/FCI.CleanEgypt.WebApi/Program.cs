@@ -36,9 +36,13 @@ builder.Services.AddSwaggerGen(c =>
                     Id = "Bearer"
                 }
             },
-            new string[] {}
+            Array.Empty<string>()
         }
     });
+
+    // add base url with this "cleanegypt.runasp.net"
+
+    c.AddServer(new OpenApiServer { Url = "http://cleanegypt.runasp.net" });
 });
 
 builder.Services
@@ -47,7 +51,8 @@ builder.Services
     .AddApplication()
     .AddIdentityUsers()
     .AddAuthenticationSchema(builder.Configuration)
-    .AddAuthorizationPolices();
+    .AddAuthorizationPolices()
+    .AddFilters();
 
 builder.Host.UseSerilog((context, configuration) => { configuration.ReadFrom.Configuration(context.Configuration); });
 

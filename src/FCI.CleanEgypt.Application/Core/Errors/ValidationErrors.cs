@@ -38,6 +38,34 @@ internal static class ValidationErrors
         internal static Error DateOfBirthInThePast => new("The Date of Birth must be in the past.");
     }
 
+    internal static class UpdateUser
+    {
+        internal static Error FirstNameIsRequired => new("The first name is required.");
+
+        internal static Error LastNameIsRequired => new("The last name is required.");
+
+        internal static Error CityIsRequired => new("The city is required.");
+
+        internal static Error StreetIsRequired => new("The street is required.");
+    }
+
+    internal static class DateOfBirth
+    {
+        internal static Error YearIsRequired => new("The year is required.");
+
+        internal static Error YearMustBeLessThanCurrentYear => new("The year must be less than the current year.");
+
+        internal static Error MonthIsRequired => new("The month is required.");
+
+        internal static Error MonthLessThan13 => new("The month must be less than 12.");
+
+        internal static Error DayIsRequired => new("The day is required.");
+
+        internal static Error DayLessThan32 => new("The day must be less than 32.");
+
+        internal static Error DateOfBirthInThePast => new("The date of birth must be in the past.");
+    }
+
     internal static class CreateAdmin
     {
         internal static Error FirstNameIsRequired => new("The first name is required.");

@@ -11,8 +11,4 @@
         <ProjectReference Include="..\FCI.CleanEgypt.Domain\FCI.CleanEgypt.Domain.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Pins\Commands\NewFolder\" />
-    </ItemGroup>
-
 </Project>

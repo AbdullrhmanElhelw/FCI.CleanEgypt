@@ -2,7 +2,9 @@ using FCI.CleanEgypt.Application.Core.Helpers;
 using FCI.CleanEgypt.Application.Users.Commands.CreateUser;
 using FCI.CleanEgypt.Application.Users.Commands.Login;
 using FCI.CleanEgypt.Application.Users.Commands.SetProfilePicture;
+using FCI.CleanEgypt.Application.Users.Commands.UpdateUser;
 using FCI.CleanEgypt.Application.Users.Queries.GetProfilePicture;
+using FCI.CleanEgypt.Application.Users.Queries.GetUser;
 using FCI.CleanEgypt.Domain.Enums;
 using FCI.CleanEgypt.WebApi.Routes;
 using MediatR;
@@ -43,7 +45,7 @@ public class UserController : ApiBaseController
     [HttpPost(ApiRoutes.Users.SetProfilePicture)]
     public async Task<IActionResult> SetProfilePicture(IFormFile file)
     {
-        var userId = Guid.TryParse(_userUtility.GetUserId(), out var id) ? id : Guid.Empty;
+        var userId = GetId(_userUtility.GetUserId());
 
         if (userId == Guid.Empty)
             return Unauthorized();
@@ -55,7 +57,7 @@ public class UserController : ApiBaseController
     [HttpGet(ApiRoutes.Users.GetProfilePicture)]
     public async Task<IActionResult> GetProfilePicture()
     {
-        var userId = Guid.TryParse(_userUtility.GetUserId(), out var id) ? id : Guid.Empty;
+        var userId = GetId(_userUtility.GetUserId());
 
         if (userId == Guid.Empty)
             return Unauthorized();
@@ -67,5 +69,37 @@ public class UserController : ApiBaseController
         var file = File(result.Value.Data, "application/octet-stream", result.Value.FileName);
 
         return result.IsSuccess ? file : HandleFailure(result);
+    }
+
+    [HttpGet(ApiRoutes.Users.Get)]
+    public async Task<IActionResult> GetUser()
+    {
+        var userId = GetId(_userUtility.GetUserId());
+
+        if (userId == Guid.Empty)
+            return Unauthorized();
+
+        var result = await _sender.Send(new GetUserQuery(userId));
+        return result.IsSuccess ? Ok(result) : HandleFailure(result);
+    }
+
+    [HttpPut(ApiRoutes.Users.Update)]
+    public async Task<IActionResult> UpdateUser([FromBody] UpdateUserDto command)
+    {
+        var userId = GetId(_userUtility.GetUserId());
+
+        if (userId == Guid.Empty)
+            return Unauthorized();
+
+        var result = await _sender.Send(new UpdateUserCommand(
+            userId,
+            command.FirstName,
+            command.LastName,
+            command.City,
+            command.Street,
+            command.Year,
+            command.Month,
+            command.Day));
+        return result.IsSuccess ? Ok(result) : HandleFailure(result);
     }
 }

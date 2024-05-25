@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FCI.CleanEgypt.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5f89a2d161559ba97fc2017ce5748ef2de23747c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9fca241cbee45907df2e99de10980cdca9872f05")]
 [assembly: System.Reflection.AssemblyProductAttribute("FCI.CleanEgypt.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FCI.CleanEgypt.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -7,6 +7,8 @@ public static class ApiRoutes
         public const string Base = "api/users";
         public const string Register = "register";
         public const string Login = "login";
+        public const string Update = "update";
+        public const string Get = "get-user";
         public const string SetProfilePicture = "set-profile-picture";
         public const string GetProfilePicture = "get-profile-picture";
     }
@@ -34,5 +36,6 @@ public static class ApiRoutes
         public const string Get = "get/{pinId:guid}";
         public const string GetAll = "get-all/{pageNumber:int}/{pageSize:int}";
         public const string Update = "update/{pinId:guid}";
+        public const string Delete = "delete/{pinId:guid}";
     }
 }

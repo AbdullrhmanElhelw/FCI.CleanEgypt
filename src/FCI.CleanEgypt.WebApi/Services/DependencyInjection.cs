@@ -34,4 +34,10 @@ public static class DependencyInjection
             .AddDefaultTokenProviders();
         return services;
     }
+
+    public static IServiceCollection AddFilters(this IServiceCollection services)
+    {
+        services.AddScoped<CheckPinIsExistsFilter>();
+        return services;
+    }
 }

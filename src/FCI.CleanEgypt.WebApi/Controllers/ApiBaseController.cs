@@ -54,4 +54,9 @@ public class ApiBaseController : ControllerBase
             }
         };
     }
+
+    protected Guid GetId(string id) =>
+        Guid.TryParse(id, out Guid guid) ?
+        guid :
+        Guid.Empty;
 }

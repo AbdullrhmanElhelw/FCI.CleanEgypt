@@ -16,6 +16,18 @@ public class PinRepository : IPinRepository
     public void Create(Pin pin)
         => _context.Pins.Add(pin);
 
+    public async Task DeletePin(Guid pinId, CancellationToken cancellationToken = default)
+    {
+        var pin = await _context.Pins.FindAsync(pinId, cancellationToken);
+        var deletedPin = Pin.Delete(pin);
+        _context.Pins.Update(deletedPin);
+    }
+
+    public async Task<Pin?> FindPinAsync(string city, string street, CancellationToken cancellationToken = default) =>
+        await _context.Pins
+        .Where(x => x.City == city && x.Street == street)
+        .FirstOrDefaultAsync(cancellationToken);
+
     public async Task<IReadOnlyCollection<Pin>> GetAllPinsAsync(Guid userId, int pageNumber, int pageSize, CancellationToken cancellationToken = default)
     {
         return await _context.Pins

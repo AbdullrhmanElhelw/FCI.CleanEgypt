@@ -24,7 +24,6 @@ internal sealed class EventConfiguration : IEntityTypeConfiguration<Event>
         builder.Property(e => e.Detalis)
             .IsRequired();
 
-
         builder.HasMany(e => e.UserEvents)
             .WithOne(e => e.Event)
             .HasForeignKey(e => e.EventId);

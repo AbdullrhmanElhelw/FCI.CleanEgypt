@@ -10,6 +10,10 @@ public interface IPinRepository
 
     Task<IReadOnlyCollection<Pin>> GetAllPinsAsync(Guid userId, int pageNumber, int pageSize, CancellationToken cancellationToken = default!);
 
+    Task DeletePin(Guid pinId, CancellationToken cancellationToken = default!);
+
+    Task<Pin?> FindPinAsync(string city, string street, CancellationToken cancellationToken = default!);
+
     void Create(Pin pin);
 
     void Update(Pin pin);

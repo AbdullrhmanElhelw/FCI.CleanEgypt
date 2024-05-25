@@ -10,9 +10,7 @@ public class Result<TValue> : Result
     }
 
     public TValue Value =>
-        IsSuccess
-            ? _value!
-        : throw new InvalidOperationException("There is no value for failure result.");
+        _value!;
 
     public static implicit operator TValue(Result<TValue> result)
     {

@@ -56,4 +56,10 @@ public sealed class Pin : BaseEntity
         pin.Image = image;
         return pin;
     }
+
+    public static Pin Delete(Pin pin)
+    {
+        pin.IsDeleted = true;
+        return pin;
+    }
 }

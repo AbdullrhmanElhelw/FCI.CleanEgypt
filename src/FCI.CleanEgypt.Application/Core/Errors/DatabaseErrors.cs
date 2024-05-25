@@ -9,6 +9,8 @@ internal static class DatabaseErrors
     {
         internal static Error UserIsNotExist(Guid userId) => new($"User with {userId} is not exists.");
 
+        internal static Error FailedToUpdateUser => new("Failed to update user.");
+
         internal static Error FailedToUpdateProfilePicture => new("Failed to update profile picture.");
     }
 
@@ -16,6 +18,9 @@ internal static class DatabaseErrors
     {
         internal static Error FailedToSaveChanges<T>(T entity) where T : BaseEntity
             => new($"Failed to save {typeof(T).Name}");
+
+        internal static Error FaildToDelete<T>(T entity) where T : BaseEntity
+            => new($"Failed to delete {typeof(T).Name}");
     }
 
     internal static class CreateEvent

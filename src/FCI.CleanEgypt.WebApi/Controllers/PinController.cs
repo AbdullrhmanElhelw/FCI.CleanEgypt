@@ -1,5 +1,6 @@
 ﻿using FCI.CleanEgypt.Application.Core.Helpers;
 using FCI.CleanEgypt.Application.Pins.Commands.CreatePin;
+using FCI.CleanEgypt.Application.Pins.Commands.DeletePin;
 using FCI.CleanEgypt.Application.Pins.Commands.UpdatePin;
 using FCI.CleanEgypt.Application.Pins.Queries.GetAllPins;
 using FCI.CleanEgypt.Application.Pins.Queries.GetPin;
@@ -25,21 +26,20 @@ public class PinController : ApiBaseController
     }
 
     [HttpPost(ApiRoutes.Pins.Create)]
-    public async Task<IActionResult> Post([FromForm] CreatePinDto command)
+    [ServiceFilter(typeof(CheckPinIsExistsFilter))]
+    public async Task<IActionResult> Post([FromForm] CreatePinDto createPinDto)
     {
-        var userId = Guid.TryParse(_userUtility.GetUserId(), out var id)
-            ? id :
-            Guid.Empty;
+        var userId = GetId(_userUtility.GetUserId());
 
         if (userId == Guid.Empty)
             return Unauthorized();
 
         var result = await _sender.Send(new CreatePinCommand(
             userId,
-            command.City,
-            command.Street,
-            command.Description,
-            command.Image));
+            createPinDto.City,
+            createPinDto.Street,
+            createPinDto.Description,
+            createPinDto.Image));
 
         return result.IsSuccess ?
             Ok(result) :
@@ -49,9 +49,7 @@ public class PinController : ApiBaseController
     [HttpGet(ApiRoutes.Pins.Get)]
     public async Task<IActionResult> Get(Guid pinId)
     {
-        var userId = Guid.TryParse(_userUtility.GetUserId(), out var id)
-            ? id :
-            Guid.Empty;
+        var userId = GetId(_userUtility.GetUserId());
 
         if (userId == Guid.Empty)
             return Unauthorized();
@@ -66,9 +64,7 @@ public class PinController : ApiBaseController
     [HttpGet(ApiRoutes.Pins.GetAll)]
     public async Task<IActionResult> GetAll(int pageNumber, int pageSize)
     {
-        var userId = Guid.TryParse(_userUtility.GetUserId(), out var id)
-            ? id :
-            Guid.Empty;
+        var userId = GetId(_userUtility.GetUserId());
 
         if (userId == Guid.Empty)
             return Unauthorized();
@@ -83,9 +79,7 @@ public class PinController : ApiBaseController
     [HttpPut(ApiRoutes.Pins.Update)]
     public async Task<IActionResult> Put(Guid pinId, [FromForm] CreatePinDto command)
     {
-        var userId = Guid.TryParse(_userUtility.GetUserId(), out var id)
-            ? id :
-            Guid.Empty;
+        var userId = GetId(_userUtility.GetUserId());
 
         if (userId == Guid.Empty)
             return Unauthorized();
@@ -95,6 +89,21 @@ public class PinController : ApiBaseController
             command.City,
             command.Street,
             command.Description));
+
+        return result.IsSuccess ?
+            Ok(result) :
+            BadRequest(result);
+    }
+
+    [HttpDelete(ApiRoutes.Pins.Delete)]
+    public async Task<IActionResult> Delete(Guid pinId)
+    {
+        var userId = GetId(_userUtility.GetUserId());
+
+        if (userId == Guid.Empty)
+            return Unauthorized();
+
+        var result = await _sender.Send(new DeletePinCommand(userId, pinId));
 
         return result.IsSuccess ?
             Ok(result) :

@@ -19,6 +19,5 @@ namespace FCI.CleanEgypt.Persistence.Migrations
         {
             migrationBuilder.Sql("DELETE FROM [dbo].[AspNetRoles] WHERE [Name] IN ('Admin', 'Doctor', 'User')");
         }
-
     }
 }

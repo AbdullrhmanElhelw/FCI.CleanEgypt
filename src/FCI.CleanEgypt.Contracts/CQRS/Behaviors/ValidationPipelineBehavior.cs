@@ -23,7 +23,6 @@ public class ValidationPipelineBehavior<TRequest, TResponse>(IEnumerable<IValida
             .Distinct()
             .ToArray();
 
-
         if (errors.Length != 0)
             return CreateValidationResult<TResponse>(errors);
 

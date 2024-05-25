@@ -12,7 +12,6 @@ public sealed class UserEvent(Guid userId, Guid eventId) : IAuditableEntity, ISo
     public Event Event { get; }
     public Guid EventId { get; private set; } = eventId;
 
-
     public DateTime CreatedOnUtc { get; } = DateTime.UtcNow;
     public DateTime? ModifiedOnUtc { get; }
     public bool IsDeleted { get; }
