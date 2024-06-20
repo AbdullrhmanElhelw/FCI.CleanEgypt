@@ -2,9 +2,9 @@
 
 namespace FCI.CleanEgypt.Application.Pins.Commands.UpdatePin;
 
-public sealed record UpdatePinCommand(
-    Guid UserId,
+public sealed record UpdatePinCommand
+    (Guid UserId,
     Guid PinId,
-    string City,
-    string Street,
-    string Description) : ICommand;
+    string TypeOfWaste,
+    string Address,
+    string Date) : ICommand;

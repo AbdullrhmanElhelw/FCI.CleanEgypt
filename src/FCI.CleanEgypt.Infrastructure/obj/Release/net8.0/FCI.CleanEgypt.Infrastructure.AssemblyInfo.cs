@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FCI.CleanEgypt.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9fca241cbee45907df2e99de10980cdca9872f05")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+833754aaf771b3ac24106aad38ba427bb8f2fddb")]
 [assembly: System.Reflection.AssemblyProductAttribute("FCI.CleanEgypt.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FCI.CleanEgypt.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

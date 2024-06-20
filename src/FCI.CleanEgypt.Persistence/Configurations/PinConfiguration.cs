@@ -14,20 +14,16 @@ internal sealed class PinConfiguration : IEntityTypeConfiguration<Pin>
 
         builder.HasQueryFilter(p => !p.IsDeleted);
 
-        builder.Property(p => p.City)
+        builder.Property(p => p.Address)
             .HasMaxLength(100)
             .IsRequired();
 
-        builder.Property(p => p.Street)
-            .HasMaxLength(100)
+        builder.Property(p => p.Date)
+            .HasMaxLength(20)
             .IsRequired();
 
         builder.Property(p => p.IsApproved)
             .HasDefaultValue(false)
-            .IsRequired();
-
-        builder.Property(p => p.Description)
-            .HasMaxLength(500)
             .IsRequired();
 
         builder.OwnsOne(p => p.Image, i =>

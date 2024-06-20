@@ -8,7 +8,7 @@ public abstract class BaseEntity : IEquatable<BaseEntity>
         CreatedOnUtc = DateTime.UtcNow;
     }
 
-    public Guid Id { get; }
+    public Guid Id { get; protected set; }
     public bool IsDeleted { get; protected set; }
 
     public DateTime? DeletedOnUtc { get; protected set; }

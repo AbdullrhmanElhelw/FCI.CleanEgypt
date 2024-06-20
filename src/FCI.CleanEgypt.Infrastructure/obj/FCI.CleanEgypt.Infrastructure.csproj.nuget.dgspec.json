@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Infrastructure\\FCI.CleanEgypt.Infrastructure.csproj": {}
+    "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Infrastructure\\FCI.CleanEgypt.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Application\\FCI.CleanEgypt.Application.csproj": {
+    "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Application\\FCI.CleanEgypt.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Application\\FCI.CleanEgypt.Application.csproj",
+        "projectUniqueName": "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Application\\FCI.CleanEgypt.Application.csproj",
         "projectName": "FCI.CleanEgypt.Application",
-        "projectPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Application\\FCI.CleanEgypt.Application.csproj",
+        "projectPath": "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Application\\FCI.CleanEgypt.Application.csproj",
         "packagesPath": "C:\\Users\\20912020100682\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Application\\obj\\",
+        "outputPath": "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\20912020100682\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,11 +29,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Contracts\\FCI.CleanEgypt.Contracts.csproj": {
-                "projectPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Contracts\\FCI.CleanEgypt.Contracts.csproj"
+              "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Contracts\\FCI.CleanEgypt.Contracts.csproj": {
+                "projectPath": "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Contracts\\FCI.CleanEgypt.Contracts.csproj"
               },
-              "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Domain\\FCI.CleanEgypt.Domain.csproj": {
-                "projectPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Domain\\FCI.CleanEgypt.Domain.csproj"
+              "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Domain\\FCI.CleanEgypt.Domain.csproj": {
+                "projectPath": "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Domain\\FCI.CleanEgypt.Domain.csproj"
               }
             }
           }
@@ -72,14 +72,14 @@
         }
       }
     },
-    "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Contracts\\FCI.CleanEgypt.Contracts.csproj": {
+    "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Contracts\\FCI.CleanEgypt.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Contracts\\FCI.CleanEgypt.Contracts.csproj",
+        "projectUniqueName": "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Contracts\\FCI.CleanEgypt.Contracts.csproj",
         "projectName": "FCI.CleanEgypt.Contracts",
-        "projectPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Contracts\\FCI.CleanEgypt.Contracts.csproj",
+        "projectPath": "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Contracts\\FCI.CleanEgypt.Contracts.csproj",
         "packagesPath": "C:\\Users\\20912020100682\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Contracts\\obj\\",
+        "outputPath": "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\20912020100682\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -171,14 +171,14 @@
         }
       }
     },
-    "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Domain\\FCI.CleanEgypt.Domain.csproj": {
+    "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Domain\\FCI.CleanEgypt.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Domain\\FCI.CleanEgypt.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Domain\\FCI.CleanEgypt.Domain.csproj",
         "projectName": "FCI.CleanEgypt.Domain",
-        "projectPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Domain\\FCI.CleanEgypt.Domain.csproj",
+        "projectPath": "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Domain\\FCI.CleanEgypt.Domain.csproj",
         "packagesPath": "C:\\Users\\20912020100682\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Domain\\obj\\",
+        "outputPath": "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\20912020100682\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -238,14 +238,14 @@
         }
       }
     },
-    "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Infrastructure\\FCI.CleanEgypt.Infrastructure.csproj": {
+    "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Infrastructure\\FCI.CleanEgypt.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Infrastructure\\FCI.CleanEgypt.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Infrastructure\\FCI.CleanEgypt.Infrastructure.csproj",
         "projectName": "FCI.CleanEgypt.Infrastructure",
-        "projectPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Infrastructure\\FCI.CleanEgypt.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Infrastructure\\FCI.CleanEgypt.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\20912020100682\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\20912020100682\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -263,8 +263,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Application\\FCI.CleanEgypt.Application.csproj": {
-                "projectPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Application\\FCI.CleanEgypt.Application.csproj"
+              "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Application\\FCI.CleanEgypt.Application.csproj": {
+                "projectPath": "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Application\\FCI.CleanEgypt.Application.csproj"
               }
             }
           }

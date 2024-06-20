@@ -110,13 +110,15 @@ internal static class ValidationErrors
         internal static Error PictureMustBeInJpegOrPngFormat => new("The picture must be in JPEG or PNG format.");
     }
 
-    internal static class CreatePin
+    internal static class RequestPin
     {
         internal static Error UserIdIsRequired => new("The user identifier is required.");
 
-        internal static Error CityIsRequired => new("The city is required.");
+        internal static Error AddressIsRequired => new("The address is required.");
 
-        internal static Error StreetIsRequired => new("The street is required.");
+        internal static Error DateIsRequired => new("The date is required.");
+
+        internal static Error TypeOfWasteIsRequired => new("The type of waste is required.");
     }
 
     internal static class UpdatePin
@@ -125,14 +127,10 @@ internal static class ValidationErrors
 
         internal static Error PinIdIsRequired => new("The pin identifier is required.");
 
-        internal static Error CityIsRequired => new("The city is required.");
+        internal static Error AddressIsRequired => new("The address is required.");
 
-        internal static Error CityMaxLength => new("The city must not exceed 50 characters.");
+        internal static Error DateIsRequired => new("The date is required.");
 
-        internal static Error StreetIsRequired => new("The street is required.");
-
-        internal static Error StreetMaxLength => new("The street must not exceed 100 characters.");
-
-        internal static Error DescriptionIsRequired => new("The description is required.");
+        internal static Error TypeOfWasteIsRequired => new("The type of waste is required.");
     }
 }

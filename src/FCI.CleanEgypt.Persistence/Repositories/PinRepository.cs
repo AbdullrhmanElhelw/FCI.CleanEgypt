@@ -23,21 +23,22 @@ public class PinRepository : IPinRepository
         _context.Pins.Update(deletedPin);
     }
 
-    public async Task<Pin?> FindPinAsync(string city, string street, CancellationToken cancellationToken = default) =>
-        await _context.Pins
-        .Where(x => x.City == city && x.Street == street)
-        .FirstOrDefaultAsync(cancellationToken);
+    /* public async Task<Pin?> FindPinAsync(string city, string street, CancellationToken cancellationToken = default) =>
+         await _context.Pins
+         .Where(x => x.City == city && x.Street == street)
+         .FirstOrDefaultAsync(cancellationToken);*/
 
     public async Task<IReadOnlyCollection<Pin>> GetAllPinsAsync(Guid userId, int pageNumber, int pageSize, CancellationToken cancellationToken = default)
     {
         return await _context.Pins
             .Where(x => x.UserId == userId)
+            .Select(x => Pin.GetPin(x.Id, x.TypeOfWaste, x.Address, x.Date))
             .Skip((pageNumber - 1) * pageSize)
             .Take(pageSize)
             .ToListAsync(cancellationToken);
     }
 
-    public async Task<Pin?> GetPin(Guid pinId, CancellationToken cancellationToken = default!)
+    public async Task<Pin?> GetPinAsync(Guid pinId, CancellationToken cancellationToken = default!)
     {
         return await _context.Pins
             .FindAsync(pinId, cancellationToken);

@@ -1,5 +1,6 @@
 using FCI.CleanEgypt.Application.Core.Helpers;
 using FCI.CleanEgypt.Application.Users.Commands.CreateUser;
+using FCI.CleanEgypt.Application.Users.Commands.DeleteProfilePicture;
 using FCI.CleanEgypt.Application.Users.Commands.Login;
 using FCI.CleanEgypt.Application.Users.Commands.SetProfilePicture;
 using FCI.CleanEgypt.Application.Users.Commands.UpdateUser;
@@ -100,6 +101,30 @@ public class UserController : ApiBaseController
             command.Year,
             command.Month,
             command.Day));
+        return result.IsSuccess ? Ok(result) : HandleFailure(result);
+    }
+
+    [HttpPut(ApiRoutes.Users.UpdateProfilePicture)]
+    public async Task<IActionResult> UpdateProfilePicture(IFormFile file)
+    {
+        var userId = GetId(_userUtility.GetUserId());
+
+        if (userId == Guid.Empty)
+            return Unauthorized();
+
+        var result = await _sender.Send(new SetProfilePictureCommand(userId, file));
+        return result.IsSuccess ? Ok(result) : HandleFailure(result);
+    }
+
+    [HttpDelete(ApiRoutes.Users.DeleteProfilePicture)]
+    public async Task<IActionResult> DeleteProfilePicture()
+    {
+        var userId = GetId(_userUtility.GetUserId());
+
+        if (userId == Guid.Empty)
+            return Unauthorized();
+
+        var result = await _sender.Send(new DeleteProfilePictureCommand(userId));
         return result.IsSuccess ? Ok(result) : HandleFailure(result);
     }
 }

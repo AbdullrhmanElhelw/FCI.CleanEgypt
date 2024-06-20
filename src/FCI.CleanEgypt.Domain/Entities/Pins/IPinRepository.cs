@@ -2,7 +2,7 @@
 
 public interface IPinRepository
 {
-    Task<Pin?> GetPin(Guid pinId, CancellationToken cancellationToken = default!);
+    Task<Pin?> GetPinAsync(Guid pinId, CancellationToken cancellationToken = default!);
 
     Task<int> GetPinCountAsync(CancellationToken cancellationToken = default!);
 
@@ -12,7 +12,8 @@ public interface IPinRepository
 
     Task DeletePin(Guid pinId, CancellationToken cancellationToken = default!);
 
-    Task<Pin?> FindPinAsync(string city, string street, CancellationToken cancellationToken = default!);
+    /*    Task<Pin?> FindPinAsync(string city, string street, CancellationToken cancellationToken = default!);
+    */
 
     void Create(Pin pin);
 

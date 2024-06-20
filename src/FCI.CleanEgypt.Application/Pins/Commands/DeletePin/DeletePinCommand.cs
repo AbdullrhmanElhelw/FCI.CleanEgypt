@@ -3,5 +3,4 @@
 namespace FCI.CleanEgypt.Application.Pins.Commands.DeletePin;
 
 public sealed record DeletePinCommand
-    (Guid UserId,
-    Guid PinId) : ICommand;
+    (Guid UserId, Guid PinId) : ICommand;

@@ -1,5 +1,4 @@
 ﻿using FCI.CleanEgypt.Application.Core.Errors;
-using FCI.CleanEgypt.Application.Core.Extensions;
 using FluentValidation;
 
 namespace FCI.CleanEgypt.Application.Pins.Commands.UpdatePin;
@@ -9,28 +8,23 @@ public sealed class UpdatePinCommandValidator : AbstractValidator<UpdatePinComma
     public UpdatePinCommandValidator()
     {
         RuleFor(x => x.UserId)
-            .NotEmpty()
-            .WithError(ValidationErrors.UpdatePin.UserIdIsRequired);
+          .NotEmpty()
+          .WithMessage(ValidationErrors.UpdatePin.UserIdIsRequired.Message);
 
         RuleFor(x => x.PinId)
             .NotEmpty()
-            .WithError(ValidationErrors.UpdatePin.PinIdIsRequired);
+            .WithMessage(ValidationErrors.UpdatePin.PinIdIsRequired.Message);
 
-        RuleFor(x => x.City)
+        RuleFor(x => x.TypeOfWaste)
             .NotEmpty()
-            .WithError(ValidationErrors.UpdatePin.CityIsRequired)
-            .MaximumLength(50)
-            .WithError(ValidationErrors.UpdatePin.CityMaxLength);
+            .WithMessage(ValidationErrors.UpdatePin.TypeOfWasteIsRequired.Message);
 
-        RuleFor(x => x.Street)
+        RuleFor(x => x.Address)
             .NotEmpty()
-            .WithError(ValidationErrors.UpdatePin.StreetIsRequired)
-            .MaximumLength(50)
-            .WithError(ValidationErrors.UpdatePin.StreetMaxLength);
+            .WithMessage(ValidationErrors.UpdatePin.AddressIsRequired.Message);
 
-        RuleFor(x => x.Description)
+        RuleFor(x => x.Date)
             .NotEmpty()
-            .WithError(ValidationErrors.UpdatePin.DescriptionIsRequired)
-            .MaximumLength(500);
+            .WithMessage(ValidationErrors.UpdatePin.DateIsRequired.Message);
     }
 }

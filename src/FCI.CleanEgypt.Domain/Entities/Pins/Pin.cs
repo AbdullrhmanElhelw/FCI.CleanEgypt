@@ -10,10 +10,12 @@ public sealed class Pin : BaseEntity
     {
     }
 
-    public string City { get; private set; }
-    public string Street { get; private set; }
+    public string TypeOfWaste { get; private set; }
+    public string Address { get; private set; }
+    public string Date { get; private set; }
 
-    public string Description { get; private set; }
+    public double? Longitude { get; private set; }
+    public double? Latitude { get; private set; }
 
     public Image? Image { get; private set; }
     public bool IsApproved { get; private set; }
@@ -25,35 +27,38 @@ public sealed class Pin : BaseEntity
     public Guid? AdminId { get; }
     public Admin? Admin { get; }
 
-    public static Pin Create(
-        string city,
-        string street,
-        string description,
-        Guid userId,
-        Image? image = null)
+    public static Pin Create(string typeOfWaste, string address, string date,
+        double? longitude, double? latitude, Image? image, Guid userId)
     {
         return new Pin
         {
-            City = city,
-            Street = street,
-            UserId = userId,
-            IsApproved = false,
-            Description = description,
-            Image = image
+            TypeOfWaste = typeOfWaste,
+            Address = address,
+            Date = date,
+            Longitude = longitude,
+            Latitude = latitude,
+            Image = image,
+            UserId = userId
         };
     }
 
-    public static Pin Update(
-        Pin pin,
-        string city,
-        string street,
-        string description,
-        Image? image = null)
+    public static Pin GetPin(Guid id, string typeOfWaste, string address, string date)
     {
-        pin.City = city;
-        pin.Street = street;
-        pin.Description = description;
-        pin.Image = image;
+        return new Pin
+        {
+            Id = id,
+            TypeOfWaste = typeOfWaste,
+            Address = address,
+            Date = date
+        };
+    }
+
+    public static Pin UpdatePin(Pin pin, string typeOfWaste, string address, string date)
+    {
+        pin.TypeOfWaste = typeOfWaste;
+        pin.Address = address;
+        pin.Date = date;
+
         return pin;
     }
 

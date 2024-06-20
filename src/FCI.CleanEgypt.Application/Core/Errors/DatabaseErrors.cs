@@ -12,6 +12,8 @@ internal static class DatabaseErrors
         internal static Error FailedToUpdateUser => new("Failed to update user.");
 
         internal static Error FailedToUpdateProfilePicture => new("Failed to update profile picture.");
+
+        internal static Error FailedToDeleteProfilePicture => new("Failed to delete profile picture.");
     }
 
     internal static class DbTransaction
@@ -40,5 +42,8 @@ internal static class DatabaseErrors
 
         internal static Error FailedToUpdatePin(Guid Id) =>
             new($"Failed to update pin with {Id}.");
+
+        internal static Error PinIsNotBelongToUser(Guid pinId, Guid userId) =>
+            new($"Pin with {pinId} is not belong to user with {userId}.");
     }
 }

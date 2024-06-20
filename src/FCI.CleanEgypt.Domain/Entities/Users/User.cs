@@ -64,4 +64,16 @@ public sealed class User : BaseIdentityEntity
         user.ProfilePicture = image;
         return user;
     }
+
+    public static User DeleteProfilePicture(User user)
+    {
+        user.ProfilePicture = null;
+        return user;
+    }
+
+    public static User UpdateProfilePicture(User user, Image image)
+    {
+        user.ProfilePicture = image;
+        return user;
+    }
 }

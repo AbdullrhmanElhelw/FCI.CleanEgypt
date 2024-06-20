@@ -10,7 +10,7 @@ public class SetProfilePictureCommandValidator : AbstractValidator<SetProfilePic
     {
         RuleFor(x => x.UserId)
             .NotEmpty()
-            .WithError(ValidationErrors.ChangePassword.UserIdIsRequired.Message);
+            .WithError(ValidationErrors.SetProfilePicture.UserIdIsRequired.Message);
 
         RuleFor(x => x.Picture)
             .NotNull()

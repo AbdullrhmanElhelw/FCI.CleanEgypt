@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "esy9fAujxNA=",
+  "dgSpecHash": "EtdrOp6rYJw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Domain\\FCI.CleanEgypt.Domain.csproj",
+  "projectFilePath": "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Domain\\FCI.CleanEgypt.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\20912020100682\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.4\\microsoft.aspnetcore.cryptography.internal.8.0.4.nupkg.sha512",
     "C:\\Users\\20912020100682\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.4\\microsoft.aspnetcore.cryptography.keyderivation.8.0.4.nupkg.sha512",

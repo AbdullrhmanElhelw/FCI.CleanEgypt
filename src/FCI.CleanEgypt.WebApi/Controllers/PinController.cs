@@ -1,9 +1,9 @@
 ﻿using FCI.CleanEgypt.Application.Core.Helpers;
-using FCI.CleanEgypt.Application.Pins.Commands.CreatePin;
 using FCI.CleanEgypt.Application.Pins.Commands.DeletePin;
+using FCI.CleanEgypt.Application.Pins.Commands.RequestPin;
 using FCI.CleanEgypt.Application.Pins.Commands.UpdatePin;
-using FCI.CleanEgypt.Application.Pins.Queries.GetAllPins;
 using FCI.CleanEgypt.Application.Pins.Queries.GetPin;
+using FCI.CleanEgypt.Application.Pins.Queries.GetUserPins;
 using FCI.CleanEgypt.Domain.Enums;
 using FCI.CleanEgypt.WebApi.Routes;
 using MediatR;
@@ -25,88 +25,97 @@ public class PinController : ApiBaseController
         _userUtility = userUtility;
     }
 
-    [HttpPost(ApiRoutes.Pins.Create)]
-    [ServiceFilter(typeof(CheckPinIsExistsFilter))]
-    public async Task<IActionResult> Post([FromForm] CreatePinDto createPinDto)
+    [HttpPost(ApiRoutes.Pins.Request)]
+    public async Task<IActionResult> RequestPin([FromForm] RequestPinDto pinDto)
     {
         var userId = GetId(_userUtility.GetUserId());
+        var requestPinCommand = new RequestPinCommand
+            (userId,
+             pinDto.TypeOfWaste,
+             pinDto.Address,
+             pinDto.Date,
+             pinDto.Longitude,
+             pinDto.Latitude,
+             pinDto.Image);
 
-        if (userId == Guid.Empty)
-            return Unauthorized();
+        var result = await _sender.Send(requestPinCommand);
 
-        var result = await _sender.Send(new CreatePinCommand(
-            userId,
-            createPinDto.City,
-            createPinDto.Street,
-            createPinDto.Description,
-            createPinDto.Image));
-
-        return result.IsSuccess ?
-            Ok(result) :
-            BadRequest(result);
-    }
-
-    [HttpGet(ApiRoutes.Pins.Get)]
-    public async Task<IActionResult> Get(Guid pinId)
-    {
-        var userId = GetId(_userUtility.GetUserId());
-
-        if (userId == Guid.Empty)
-            return Unauthorized();
-
-        var result = await _sender.Send(new GetPinQuery(userId, pinId));
-
-        return result.IsSuccess ?
-            Ok(result) :
-            BadRequest(result);
+        return result.IsSuccess
+            ? Ok(result)
+            : HandleFailure(result);
     }
 
     [HttpGet(ApiRoutes.Pins.GetAll)]
-    public async Task<IActionResult> GetAll(int pageNumber, int pageSize)
+    public async Task<IActionResult> GetPins(int pageNumber, int pageSize)
     {
         var userId = GetId(_userUtility.GetUserId());
 
         if (userId == Guid.Empty)
             return Unauthorized();
 
-        var result = await _sender.Send(new GetAllPinsQuery(userId, pageNumber, pageSize));
+        var requestPinCommand = new GetUserPinsQuery(userId, pageNumber, pageSize);
 
-        return result.IsSuccess ?
-            Ok(result) :
-            BadRequest(result);
+        var result = await _sender.Send(requestPinCommand);
+
+        return result.IsSuccess
+            ? Ok(result)
+            : HandleFailure(result);
+    }
+
+    [HttpGet(ApiRoutes.Pins.Get)]
+    public async Task<IActionResult> GetPin(Guid pinId)
+    {
+        var userId = GetId(_userUtility.GetUserId());
+
+        if (userId == Guid.Empty)
+            return Unauthorized();
+
+        var requestPinCommand = new GetPinQuery(userId, pinId);
+
+        var result = await _sender.Send(requestPinCommand);
+
+        return result.IsSuccess
+            ? Ok(result)
+            : HandleFailure(result);
     }
 
     [HttpPut(ApiRoutes.Pins.Update)]
-    public async Task<IActionResult> Put(Guid pinId, [FromForm] CreatePinDto command)
+    public async Task<IActionResult> UpdatePin(Guid pinId, [FromForm] UpdatePinDto pinDto)
     {
         var userId = GetId(_userUtility.GetUserId());
 
         if (userId == Guid.Empty)
             return Unauthorized();
 
-        var result = await _sender.Send(new UpdatePinCommand(userId,
-            pinId,
-            command.City,
-            command.Street,
-            command.Description));
+        var requestPinCommand = new UpdatePinCommand
+            (userId,
+             pinId,
+             pinDto.TypeOfWaste,
+             pinDto.Address,
+             pinDto.Date
+             );
 
-        return result.IsSuccess ?
-            Ok(result) :
-            BadRequest(result);
+        var result = await _sender.Send(requestPinCommand);
+
+        return result.IsSuccess
+            ? Ok(result)
+            : HandleFailure(result);
     }
 
     [HttpDelete(ApiRoutes.Pins.Delete)]
-    public async Task<IActionResult> Delete(Guid pinId)
+    public async Task<IActionResult> DeletePin(Guid pinId)
     {
         var userId = GetId(_userUtility.GetUserId());
 
         if (userId == Guid.Empty)
             return Unauthorized();
 
-        var result = await _sender.Send(new DeletePinCommand(userId, pinId));
+        var requestPinCommand = new DeletePinCommand(userId, pinId);
 
-        return result.IsSuccess ?
-            Ok(result) :
-            BadRequest(result);
+        var result = await _sender.Send(requestPinCommand);
+
+        return result.IsSuccess
+            ? Ok(result)
+            : HandleFailure(result);
     }
 }

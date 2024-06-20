@@ -1,38 +1,39 @@
 ﻿using FCI.CleanEgypt.Application.Core.Errors;
 using FCI.CleanEgypt.Contracts.ApiResponse.Results;
 using FCI.CleanEgypt.Contracts.CQRS.Queries;
-using FCI.CleanEgypt.Domain.Common;
 using FCI.CleanEgypt.Domain.Entities.Pins;
+using FCI.CleanEgypt.Domain.Entities.Users;
 using Microsoft.AspNetCore.Identity;
 
 namespace FCI.CleanEgypt.Application.Pins.Queries.GetPin;
 
 public sealed class GetPinQueryHandler
-    : IQueryHandler<GetPinQuery, GetPinResponse>
-
+    : IQueryHandler<GetPinQuery, PinDto>
 {
+    private readonly UserManager<User> _userManager;
     private readonly IPinRepository _pinRepository;
-    private readonly UserManager<BaseIdentityEntity> _userManager;
 
-    public GetPinQueryHandler(IPinRepository pinRepository, UserManager<BaseIdentityEntity> userManager)
+    public GetPinQueryHandler(UserManager<User> userManager, IPinRepository pinRepository)
     {
-        _pinRepository = pinRepository;
         _userManager = userManager;
+        _pinRepository = pinRepository;
     }
 
-    public async Task<Result<GetPinResponse>> Handle(GetPinQuery request, CancellationToken cancellationToken)
+    public async Task<Result<PinDto>> Handle(GetPinQuery request, CancellationToken cancellationToken)
     {
         var checkUserIsExists = await _userManager.FindByIdAsync(request.UserId.ToString());
 
         if (checkUserIsExists is null)
-        {
-            return Result.Fail<GetPinResponse>(DatabaseErrors.Users.UserIsNotExist(request.UserId));
-        }
+            return Result.Fail<PinDto>(DatabaseErrors.Users.UserIsNotExist(request.UserId));
 
-        var pin = await _pinRepository.GetPin(request.PinId, cancellationToken);
+        var pin = await _pinRepository.GetPinAsync(request.PinId);
 
-        return pin is null
-            ? Result.Fail<GetPinResponse>(DatabaseErrors.Pins.PinNotFound(request.PinId))
-            : Result.Ok(new GetPinResponse(pin.Id, pin.City, pin.Street, pin.Description));
+        if (pin is null)
+            return Result.Fail<PinDto>(DatabaseErrors.Pins.PinNotFound(request.PinId));
+
+        if (pin.UserId != request.UserId)
+            return Result.Fail<PinDto>(DatabaseErrors.Pins.PinIsNotBelongToUser(request.PinId, request.UserId));
+
+        return Result.Ok(new PinDto(pin.Id, pin.TypeOfWaste, pin.Address, pin.Date));
     }
 }

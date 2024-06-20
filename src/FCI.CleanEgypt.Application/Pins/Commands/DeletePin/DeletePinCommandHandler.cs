@@ -2,8 +2,8 @@
 using FCI.CleanEgypt.Contracts.ApiResponse.Results;
 using FCI.CleanEgypt.Contracts.CQRS.Commands;
 using FCI.CleanEgypt.Contracts.UnitOfWork;
-using FCI.CleanEgypt.Domain.Common;
 using FCI.CleanEgypt.Domain.Entities.Pins;
+using FCI.CleanEgypt.Domain.Entities.Users;
 using Microsoft.AspNetCore.Identity;
 
 namespace FCI.CleanEgypt.Application.Pins.Commands.DeletePin;
@@ -11,33 +11,38 @@ namespace FCI.CleanEgypt.Application.Pins.Commands.DeletePin;
 public sealed class DeletePinCommandHandler
     : ICommandHandler<DeletePinCommand>
 {
+    private readonly UserManager<User> _userManager;
     private readonly IPinRepository _pinRepository;
     private readonly IUnitOfWork _unitOfWork;
-    private readonly UserManager<BaseIdentityEntity> _userManager;
 
-    public DeletePinCommandHandler(IPinRepository pinRepository, IUnitOfWork unitOfWork, UserManager<BaseIdentityEntity> userManager)
+    public DeletePinCommandHandler(UserManager<User> userManager, IPinRepository pinRepository, IUnitOfWork unitOfWork)
     {
+        _userManager = userManager;
         _pinRepository = pinRepository;
         _unitOfWork = unitOfWork;
-        _userManager = userManager;
     }
 
     public async Task<Result> Handle(DeletePinCommand request, CancellationToken cancellationToken)
     {
-        var findUser = await _userManager.FindByIdAsync(request.UserId.ToString());
+        var checkUserIsExists = await _userManager.FindByIdAsync(request.UserId.ToString());
 
-        if (findUser is null)
+        if (checkUserIsExists == null)
             return Result.Fail(DatabaseErrors.Users.UserIsNotExist(request.UserId));
 
-        var findPin = await _pinRepository.GetPin(request.PinId, cancellationToken);
+        var pin = await _pinRepository.GetPinAsync(request.PinId, cancellationToken);
 
-        if (findPin is null)
-            return Result.Fail("Pin not found");
+        if (pin is null)
+            return Result.Fail(DatabaseErrors.Pins.PinNotFound(request.PinId));
 
-        await _pinRepository.DeletePin(request.PinId, cancellationToken);
+        if (pin.UserId != request.UserId)
+            return Result.Fail(DatabaseErrors.Pins.PinIsNotBelongToUser(request.PinId, request.UserId));
+
+        pin = Pin.Delete(pin);
+
+        _pinRepository.Update(pin);
 
         return await _unitOfWork.SaveChangesAsync(cancellationToken) == 0
-            ? Result.Fail(DatabaseErrors.DbTransaction.FaildToDelete(findPin))
+            ? Result.Fail(DatabaseErrors.DbTransaction.FailedToSaveChanges(pin))
             : Result.Ok("Pin Deleted Successfully");
     }
 }

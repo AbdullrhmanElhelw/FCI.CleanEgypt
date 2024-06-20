@@ -42,7 +42,7 @@ builder.Services.AddSwaggerGen(c =>
 
     // add base url with this "cleanegypt.runasp.net"
 
-    c.AddServer(new OpenApiServer { Url = "http://cleanegypt.runasp.net" });
+    /* c.AddServer(new OpenApiServer { Url = "http://cleanegypt.runasp.net" });*/
 });
 
 builder.Services
@@ -56,6 +56,14 @@ builder.Services
 
 builder.Host.UseSerilog((context, configuration) => { configuration.ReadFrom.Configuration(context.Configuration); });
 
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(
+        builder => builder.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -67,6 +75,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseSerilogRequestLogging();
 app.UseHttpsRedirection();
+app.UseCors();
 app.UseAuthentication();
 app.UseAuthorization();
 

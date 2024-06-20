@@ -5498,11 +5498,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.WebApi\\FCI.CleanEgypt.WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.WebApi\\FCI.CleanEgypt.WebApi.csproj",
       "projectName": "FCI.CleanEgypt.WebApi",
-      "projectPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.WebApi\\FCI.CleanEgypt.WebApi.csproj",
+      "projectPath": "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.WebApi\\FCI.CleanEgypt.WebApi.csproj",
       "packagesPath": "C:\\Users\\20912020100682\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.WebApi\\obj\\",
+      "outputPath": "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\20912020100682\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5520,11 +5520,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Infrastructure\\FCI.CleanEgypt.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Infrastructure\\FCI.CleanEgypt.Infrastructure.csproj"
+            "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Infrastructure\\FCI.CleanEgypt.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Infrastructure\\FCI.CleanEgypt.Infrastructure.csproj"
             },
-            "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Persistence\\FCI.CleanEgypt.Persistence.csproj": {
-              "projectPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Persistence\\FCI.CleanEgypt.Persistence.csproj"
+            "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Persistence\\FCI.CleanEgypt.Persistence.csproj": {
+              "projectPath": "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Persistence\\FCI.CleanEgypt.Persistence.csproj"
             }
           }
         }

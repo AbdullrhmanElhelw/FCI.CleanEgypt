@@ -11,6 +11,9 @@ public static class ApiRoutes
         public const string Get = "get-user";
         public const string SetProfilePicture = "set-profile-picture";
         public const string GetProfilePicture = "get-profile-picture";
+        public const string DeleteProfilePicture = "delete-profile-picture";
+        public const string UpdatePassword = "update-password";
+        public const string UpdateProfilePicture = "update-profile-picture";
     }
 
     public static class Admin
@@ -32,7 +35,7 @@ public static class ApiRoutes
     public static class Pins
     {
         public const string Base = "api/pins";
-        public const string Create = "create";
+        public const string Request = "request";
         public const string Get = "get/{pinId:guid}";
         public const string GetAll = "get-all/{pageNumber:int}/{pageSize:int}";
         public const string Update = "update/{pinId:guid}";

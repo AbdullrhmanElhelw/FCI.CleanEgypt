@@ -3785,11 +3785,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Contracts\\FCI.CleanEgypt.Contracts.csproj",
+      "projectUniqueName": "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Contracts\\FCI.CleanEgypt.Contracts.csproj",
       "projectName": "FCI.CleanEgypt.Contracts",
-      "projectPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Contracts\\FCI.CleanEgypt.Contracts.csproj",
+      "projectPath": "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Contracts\\FCI.CleanEgypt.Contracts.csproj",
       "packagesPath": "C:\\Users\\20912020100682\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\20912020100682\\Desktop\\Projects\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Contracts\\obj\\",
+      "outputPath": "C:\\Users\\20912020100682\\Desktop\\New folder\\FCI.CleanEgypt\\src\\FCI.CleanEgypt.Contracts\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\20912020100682\\AppData\\Roaming\\NuGet\\NuGet.Config",
